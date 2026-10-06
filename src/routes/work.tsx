@@ -17,7 +17,8 @@ export const Route = createFileRoute("/work")({
       { property: "og:title", content: "Selected Work | Clicks N Codes" },
       {
         property: "og:description",
-        content: "Editorial case studies spanning marketing, product and automation work.",
+        content:
+          "Editorial case studies spanning marketing, product and automation work.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

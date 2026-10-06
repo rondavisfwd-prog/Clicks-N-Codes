@@ -16,8 +16,13 @@ export function StoryRail() {
     let frame = 0;
     const measure = () => {
       frame = 0;
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0);
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(
+        scrollable > 0
+          ? Math.min(1, Math.max(0, window.scrollY / scrollable))
+          : 0,
+      );
     };
     const onScroll = () => {
       if (frame) return;
@@ -33,7 +38,10 @@ export function StoryRail() {
     };
   }, []);
 
-  const activeIndex = Math.min(stages.length - 1, Math.floor(progress * stages.length));
+  const activeIndex = Math.min(
+    stages.length - 1,
+    Math.floor(progress * stages.length),
+  );
 
   return (
     <div

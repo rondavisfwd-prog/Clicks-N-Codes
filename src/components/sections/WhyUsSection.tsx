@@ -6,7 +6,10 @@ export function WhyUsSection() {
   return (
     <section className="band border-t border-hairline">
       <div className="shell grid gap-[clamp(3rem,7vh,5rem)] lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-        <SectionHeader eyebrow="Why Clicks N Codes" title="Two disciplines. One accountability." />
+        <SectionHeader
+          eyebrow="Why Clicks N Codes"
+          title="Two disciplines. One accountability."
+        />
 
         <div className="flex flex-col">
           {differentiators.map((item, index) => (

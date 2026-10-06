@@ -15,7 +15,8 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Start a Project | Clicks N Codes" },
       {
         property: "og:description",
-        content: "Share your brief with Clicks N Codes — marketing, technology and AI in one team.",
+        content:
+          "Share your brief with Clicks N Codes — marketing, technology and AI in one team.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -70,8 +71,8 @@ function ContactPage() {
               </div>
             </div>
             <p className="border-t border-hairline pt-6 text-sm text-muted-foreground">
-              Not sure which discipline your project needs? Describe the outcome and we&apos;ll map
-              the route.
+              Not sure which discipline your project needs? Describe the outcome
+              and we&apos;ll map the route.
             </p>
           </aside>
         </div>

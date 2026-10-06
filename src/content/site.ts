@@ -3,7 +3,8 @@
 
 export const site = {
   name: "Clicks N Codes",
-  tagline: "We create the clicks. We write the code. We build what happens next.",
+  tagline:
+    "We create the clicks. We write the code. We build what happens next.",
   email: "hello@clicksncodes.com",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/" },
@@ -131,7 +132,8 @@ export const projects: Project[] = [
       "A retail brand with strong products and a store experience that never translated online.",
     solution:
       "A rebuild of the identity, a new storefront and a paid media programme reading from the same data.",
-    outcome: "Placeholder outcome copy. Replace with the real engagement summary.",
+    outcome:
+      "Placeholder outcome copy. Replace with the real engagement summary.",
     metrics: [
       { value: "XX%", label: "Revenue growth" },
       { value: "XX%", label: "Conversion rate" },
@@ -146,10 +148,12 @@ export const projects: Project[] = [
     industry: "B2B software",
     year: "2025",
     services: ["Product Design", "Development"],
-    challenge: "A capable internal tool nobody outside the founding team could use.",
+    challenge:
+      "A capable internal tool nobody outside the founding team could use.",
     solution:
       "Product design from first principles, then a web app built around the two jobs that mattered.",
-    outcome: "Placeholder outcome copy. Replace with the real engagement summary.",
+    outcome:
+      "Placeholder outcome copy. Replace with the real engagement summary.",
     metrics: [
       { value: "XX", label: "Weeks to launch" },
       { value: "XX%", label: "Task completion" },
@@ -164,10 +168,12 @@ export const projects: Project[] = [
     industry: "Professional services",
     year: "2026",
     services: ["AI", "Automation"],
-    challenge: "Every inbound lead passed through four inboxes before anyone replied.",
+    challenge:
+      "Every inbound lead passed through four inboxes before anyone replied.",
     solution:
       "AI qualification wired into the CRM, with follow-up sequences and reporting running unattended.",
-    outcome: "Placeholder outcome copy. Replace with the real engagement summary.",
+    outcome:
+      "Placeholder outcome copy. Replace with the real engagement summary.",
     metrics: [
       { value: "XX hrs", label: "Saved weekly" },
       { value: "XX%", label: "Faster response" },

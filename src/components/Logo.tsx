@@ -5,7 +5,13 @@ import { cn } from "@/lib/utils";
  * Typographic lockup: CLICKS in weight, N in accent, CODES in outline —
  * the two halves of the name held together by the accent.
  */
-export function Logo({ className, onClick }: { className?: string; onClick?: () => void }) {
+export function Logo({
+  className,
+  onClick,
+}: {
+  className?: string;
+  onClick?: () => void;
+}) {
   return (
     <Link
       to="/"

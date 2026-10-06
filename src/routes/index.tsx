@@ -14,16 +14,23 @@ import { StoryRail } from "@/components/StoryRail";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Digital Marketing, Development & AI Automation Agency | Clicks N Codes" },
+      {
+        title:
+          "Digital Marketing, Development & AI Automation Agency | Clicks N Codes",
+      },
       {
         name: "description",
         content:
           "Clicks N Codes is a digital agency combining marketing, technology and AI to build brands, products and systems designed for growth.",
       },
-      { property: "og:title", content: "Clicks N Codes — Marketing, Technology & AI" },
+      {
+        property: "og:title",
+        content: "Clicks N Codes — Marketing, Technology & AI",
+      },
       {
         property: "og:description",
-        content: "We create the clicks. We write the code. We build what happens next.",
+        content:
+          "We create the clicks. We write the code. We build what happens next.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

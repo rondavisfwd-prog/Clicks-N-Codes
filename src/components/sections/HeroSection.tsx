@@ -93,13 +93,17 @@ export function HeroSection() {
         {/* Typographic hierarchy carries the story: light setup, heavy payload. */}
         <h1 className="mt-[clamp(2.5rem,6vh,4.5rem)] text-mega uppercase">
           <Reveal className="mask-rise">
-            <span className="mask-rise-inner font-light text-muted-foreground">We create</span>
+            <span className="mask-rise-inner font-light text-muted-foreground">
+              We create
+            </span>
           </Reveal>
           <Reveal delay={90} className="mask-rise">
             <span className="mask-rise-inner font-bold">the clicks.</span>
           </Reveal>
           <Reveal delay={180} className="mask-rise">
-            <span className="mask-rise-inner font-light text-muted-foreground">We write</span>
+            <span className="mask-rise-inner font-light text-muted-foreground">
+              We write
+            </span>
           </Reveal>
           <Reveal delay={270} className="mask-rise">
             <span className="mask-rise-inner font-bold">
@@ -111,12 +115,15 @@ export function HeroSection() {
         <div className="mt-[clamp(3rem,7vh,5.5rem)] grid gap-10 md:grid-cols-[1fr_auto] md:items-end md:gap-20">
           <Reveal delay={140}>
             <p className="max-w-[42ch] text-lead text-muted-foreground">
-              Clicks N Codes is a digital agency combining marketing, technology and AI to build
-              brands, products and systems designed for growth.
+              Clicks N Codes is a digital agency combining marketing, technology
+              and AI to build brands, products and systems designed for growth.
             </p>
           </Reveal>
 
-          <Reveal delay={220} className="flex flex-wrap items-center gap-x-8 gap-y-5">
+          <Reveal
+            delay={220}
+            className="flex flex-wrap items-center gap-x-8 gap-y-5"
+          >
             <Link
               to="/contact"
               className="group inline-flex items-center gap-3 bg-ink px-8 py-5 text-xs font-medium uppercase tracking-[0.18em] text-ink-foreground transition-transform duration-500 hover:-translate-y-0.5"

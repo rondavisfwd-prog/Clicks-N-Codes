@@ -3,14 +3,21 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
-const prompts = ["Need more clicks?", "Need better code?", "Need smarter automation?"];
+const prompts = [
+  "Need more clicks?",
+  "Need better code?",
+  "Need smarter automation?",
+];
 
 export function CTASection() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = window.setInterval(() => setIndex((i) => (i + 1) % prompts.length), 2800);
+    const id = window.setInterval(
+      () => setIndex((i) => (i + 1) % prompts.length),
+      2800,
+    );
     return () => window.clearInterval(id);
   }, []);
 
@@ -19,17 +26,24 @@ export function CTASection() {
       <div className="shell">
         <Reveal className="flex items-center gap-4">
           <span className="h-px w-10 bg-accent" aria-hidden="true" />
-          <span key={prompts[index]} className="eyebrow reveal reveal-in text-accent">
+          <span
+            key={prompts[index]}
+            className="eyebrow reveal reveal-in text-accent"
+          >
             {prompts[index]}
           </span>
         </Reveal>
 
         <h2 className="mt-[clamp(2.5rem,6vh,4rem)] text-mega uppercase">
           <Reveal className="mask-rise">
-            <span className="mask-rise-inner font-light opacity-50">Got an idea?</span>
+            <span className="mask-rise-inner font-light opacity-50">
+              Got an idea?
+            </span>
           </Reveal>
           <Reveal delay={90} className="mask-rise">
-            <span className="mask-rise-inner font-bold">Let&apos;s build it.</span>
+            <span className="mask-rise-inner font-bold">
+              Let&apos;s build it.
+            </span>
           </Reveal>
         </h2>
 

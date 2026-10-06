@@ -23,7 +23,9 @@ export function PageHero({
       </Reveal>
       {copy ? (
         <Reveal delay={140}>
-          <p className="mt-10 max-w-[42ch] text-lead text-muted-foreground">{copy}</p>
+          <p className="mt-10 max-w-[42ch] text-lead text-muted-foreground">
+            {copy}
+          </p>
         </Reveal>
       ) : null}
     </section>

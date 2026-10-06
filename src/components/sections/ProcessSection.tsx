@@ -6,7 +6,10 @@ export function ProcessSection() {
   return (
     <section className="band border-t border-hairline">
       <div className="shell grid gap-[clamp(3rem,7vh,5rem)] lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-        <SectionHeader eyebrow="Process" title="How we turn ideas into impact" />
+        <SectionHeader
+          eyebrow="Process"
+          title="How we turn ideas into impact"
+        />
 
         {/* Rows, not cards: the number carries the hierarchy. */}
         <ol className="flex flex-col">

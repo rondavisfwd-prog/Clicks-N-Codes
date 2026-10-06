@@ -5,9 +5,14 @@ import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 import { Plus, Minus } from "lucide-react";
 
-export function ServicesSection({ showHeader = true }: { showHeader?: boolean }) {
+export function ServicesSection({
+  showHeader = true,
+}: {
+  showHeader?: boolean;
+}) {
   const [active, setActive] = useState<string>(serviceGroups[0]!.id);
-  const current = serviceGroups.find((group) => group.id === active) ?? serviceGroups[0]!;
+  const current =
+    serviceGroups.find((group) => group.id === active) ?? serviceGroups[0]!;
 
   return (
     <section id="services" className="band border-t border-hairline">
@@ -32,7 +37,10 @@ export function ServicesSection({ showHeader = true }: { showHeader?: boolean })
             {serviceGroups.map((group) => {
               const isActive = group.id === active;
               return (
-                <li key={group.id} className="border-b border-hairline first:border-t">
+                <li
+                  key={group.id}
+                  className="border-b border-hairline first:border-t"
+                >
                   <button
                     type="button"
                     onMouseEnter={() => setActive(group.id)}
@@ -67,7 +75,10 @@ export function ServicesSection({ showHeader = true }: { showHeader?: boolean })
           </ul>
 
           <div className="flex flex-col justify-center">
-            <p key={`${current.id}-summary`} className="reveal reveal-in max-w-[32ch] text-lead">
+            <p
+              key={`${current.id}-summary`}
+              className="reveal reveal-in max-w-[32ch] text-lead"
+            >
               {current.summary}
             </p>
             <p
@@ -76,7 +87,9 @@ export function ServicesSection({ showHeader = true }: { showHeader?: boolean })
             >
               {current.capabilities.map((capability, index) => (
                 <span key={capability}>
-                  {index > 0 ? <span className="text-hairline"> / </span> : null}
+                  {index > 0 ? (
+                    <span className="text-hairline"> / </span>
+                  ) : null}
                   {capability}
                 </span>
               ))}
@@ -89,7 +102,10 @@ export function ServicesSection({ showHeader = true }: { showHeader?: boolean })
           {serviceGroups.map((group) => {
             const isOpen = group.id === active;
             return (
-              <div key={group.id} className="border-b border-hairline first:border-t">
+              <div
+                key={group.id}
+                className="border-b border-hairline first:border-t"
+              >
                 <h3>
                   <button
                     type="button"
@@ -111,19 +127,29 @@ export function ServicesSection({ showHeader = true }: { showHeader?: boolean })
                       </span>
                     </span>
                     {isOpen ? (
-                      <Minus className="size-5 shrink-0 text-accent" aria-hidden="true" />
+                      <Minus
+                        className="size-5 shrink-0 text-accent"
+                        aria-hidden="true"
+                      />
                     ) : (
-                      <Plus className="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
+                      <Plus
+                        className="size-5 shrink-0 text-muted-foreground"
+                        aria-hidden="true"
+                      />
                     )}
                   </button>
                 </h3>
                 {isOpen ? (
                   <div className="pb-8">
-                    <p className="text-[0.9375rem] leading-relaxed">{group.summary}</p>
+                    <p className="text-[0.9375rem] leading-relaxed">
+                      {group.summary}
+                    </p>
                     <p className="mt-5 text-sm leading-[1.9] text-muted-foreground">
                       {group.capabilities.map((capability, index) => (
                         <span key={capability}>
-                          {index > 0 ? <span className="text-hairline"> / </span> : null}
+                          {index > 0 ? (
+                            <span className="text-hairline"> / </span>
+                          ) : null}
                           {capability}
                         </span>
                       ))}

@@ -13,7 +13,9 @@ export function Footer() {
             <p className="max-w-[24ch] font-display text-title font-light uppercase text-muted-foreground">
               We create the clicks.
               <br />
-              <span className="font-bold text-foreground">We write the code.</span>
+              <span className="font-bold text-foreground">
+                We write the code.
+              </span>
             </p>
             <a
               href={`mailto:${site.email}`}

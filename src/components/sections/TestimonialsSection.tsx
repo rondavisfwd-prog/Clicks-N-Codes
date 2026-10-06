@@ -31,7 +31,9 @@ export function TestimonialsSection() {
           className="mt-[clamp(3rem,7vh,4.5rem)] flex flex-wrap items-end justify-between gap-10 border-t border-hairline pt-8"
         >
           <div>
-            <p className="text-xs uppercase tracking-[0.18em]">{current.name}</p>
+            <p className="text-xs uppercase tracking-[0.18em]">
+              {current.name}
+            </p>
             <p className="mt-3 text-sm text-muted-foreground">
               {current.role}, {current.company}
             </p>
@@ -44,12 +46,17 @@ export function TestimonialsSection() {
 
           <div className="flex items-center gap-2">
             <span className="mr-4 text-xs tabular-nums text-muted-foreground">
-              {String(index + 1).padStart(2, "0")} / {String(testimonials.length).padStart(2, "0")}
+              {String(index + 1).padStart(2, "0")} /{" "}
+              {String(testimonials.length).padStart(2, "0")}
             </span>
             <button
               type="button"
               aria-label="Previous testimonial"
-              onClick={() => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length)}
+              onClick={() =>
+                setIndex(
+                  (i) => (i - 1 + testimonials.length) % testimonials.length,
+                )
+              }
               className="inline-flex size-12 items-center justify-center border border-hairline transition-colors duration-500 hover:border-accent hover:text-accent"
             >
               <ArrowLeft className="size-4" aria-hidden="true" />

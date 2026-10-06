@@ -13,19 +13,25 @@ export function AISection() {
 
           <h2 className="mt-[clamp(2rem,5vh,3.5rem)] text-headline uppercase">
             <Reveal className="mask-rise">
-              <span className="mask-rise-inner font-bold">Automate the busywork.</span>
+              <span className="mask-rise-inner font-bold">
+                Automate the busywork.
+              </span>
             </Reveal>
             <Reveal delay={90} className="mask-rise">
               <span className="mask-rise-inner font-light opacity-60">
-                <span className="font-bold text-accent opacity-100">Amplify</span> the human work.
+                <span className="font-bold text-accent opacity-100">
+                  Amplify
+                </span>{" "}
+                the human work.
               </span>
             </Reveal>
           </h2>
 
           <Reveal delay={140}>
             <p className="mt-12 max-w-[42ch] text-lead opacity-70">
-              We map the repetitive processes inside your business, then build intelligent automation
-              around them — so your team spends its hours where judgment pays.
+              We map the repetitive processes inside your business, then build
+              intelligent automation around them — so your team spends its hours
+              where judgment pays.
             </p>
           </Reveal>
 
@@ -34,7 +40,9 @@ export function AISection() {
             <p className="mt-12 max-w-[46ch] border-t border-white/10 pt-8 text-sm leading-[2] opacity-60">
               {automationCapabilities.map((capability, index) => (
                 <span key={capability}>
-                  {index > 0 ? <span className="text-accent/60"> / </span> : null}
+                  {index > 0 ? (
+                    <span className="text-accent/60"> / </span>
+                  ) : null}
                   {capability}
                 </span>
               ))}
@@ -58,13 +66,17 @@ export function AISection() {
                   <p className="font-display text-lg font-bold uppercase tracking-[-0.02em]">
                     {stage.label}
                   </p>
-                  <p className="mt-2 max-w-[34ch] text-sm opacity-55">{stage.note}</p>
+                  <p className="mt-2 max-w-[34ch] text-sm opacity-55">
+                    {stage.note}
+                  </p>
                 </div>
               </div>
               <span
                 aria-hidden="true"
                 className="absolute left-0 top-0 h-px bg-accent transition-all duration-1000"
-                style={{ width: `${((index + 1) / workflowStages.length) * 100}%` }}
+                style={{
+                  width: `${((index + 1) / workflowStages.length) * 100}%`,
+                }}
               />
             </Reveal>
           ))}

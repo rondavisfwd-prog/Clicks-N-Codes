@@ -7,7 +7,10 @@ import { PageHero } from "@/components/PageHero";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Marketing, Design, Development & AI | Clicks N Codes" },
+      {
+        title:
+          "Services — Marketing, Design, Development & AI | Clicks N Codes",
+      },
       {
         name: "description",
         content:

@@ -43,7 +43,10 @@ export function Navbar() {
       >
         <Logo />
 
-        <nav aria-label="Primary" className="hidden items-center gap-10 md:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-10 md:flex"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -99,7 +102,10 @@ export function Navbar() {
 function MobileMenu({ onNavigate }: { onNavigate: () => void }) {
   return (
     <div className="fixed inset-0 top-0 z-40 flex h-[100dvh] flex-col bg-background pt-[5.25rem] md:hidden">
-      <nav aria-label="Mobile" className="shell flex flex-1 flex-col justify-center gap-1">
+      <nav
+        aria-label="Mobile"
+        className="shell flex flex-1 flex-col justify-center gap-1"
+      >
         {navLinks.map((link, i) => (
           <Link
             key={link.to}

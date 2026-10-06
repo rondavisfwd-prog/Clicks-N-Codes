@@ -3,7 +3,9 @@ import { ArrowUpRight, Check, Loader2 } from "lucide-react";
 import { budgetOptions, serviceChips, timelineOptions } from "@/content/site";
 import { cn } from "@/lib/utils";
 
-type Errors = Partial<Record<"name" | "email" | "services" | "description", string>>;
+type Errors = Partial<
+  Record<"name" | "email" | "services" | "description", string>
+>;
 
 export function ContactForm() {
   const [services, setServices] = useState<string[]>([]);
@@ -14,7 +16,9 @@ export function ContactForm() {
 
   const toggleService = (service: string) =>
     setServices((current) =>
-      current.includes(service) ? current.filter((s) => s !== service) : [...current, service],
+      current.includes(service)
+        ? current.filter((s) => s !== service)
+        : [...current, service],
     );
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -26,9 +30,11 @@ export function ContactForm() {
 
     const next: Errors = {};
     if (!name) next.name = "Please tell us your name.";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Please enter a valid email.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      next.email = "Please enter a valid email.";
     if (services.length === 0) next.services = "Select at least one service.";
-    if (description.length < 20) next.description = "A couple of sentences helps us reply properly.";
+    if (description.length < 20)
+      next.description = "A couple of sentences helps us reply properly.";
 
     setErrors(next);
     if (Object.keys(next).length > 0) return;
@@ -44,10 +50,12 @@ export function ContactForm() {
         <span className="inline-flex size-12 items-center justify-center bg-accent text-accent-foreground">
           <Check className="size-5" aria-hidden="true" />
         </span>
-        <h2 className="mt-8 font-display text-title font-bold uppercase">Inquiry received</h2>
+        <h2 className="mt-8 font-display text-title font-bold uppercase">
+          Inquiry received
+        </h2>
         <p className="mt-4 max-w-[44ch] text-sm text-muted-foreground">
-          Thanks — we&apos;ll come back to you within one business day with next steps and a few
-          questions.
+          Thanks — we&apos;ll come back to you within one business day with next
+          steps and a few questions.
         </p>
         <button
           type="button"
@@ -70,12 +78,20 @@ export function ContactForm() {
       <div className="grid gap-8 sm:grid-cols-2">
         <Field label="Name" name="name" error={errors.name} required />
         <Field label="Company" name="company" />
-        <Field label="Email" name="email" type="email" error={errors.email} required />
+        <Field
+          label="Email"
+          name="email"
+          type="email"
+          error={errors.email}
+          required
+        />
         <Field label="Phone (optional)" name="phone" type="tel" />
       </div>
 
       <fieldset>
-        <legend className="eyebrow text-muted-foreground">What do you need?</legend>
+        <legend className="eyebrow text-muted-foreground">
+          What do you need?
+        </legend>
         <div className="mt-6 flex flex-wrap gap-2.5">
           {serviceChips.map((chip) => {
             const selected = services.includes(chip);
@@ -125,7 +141,9 @@ export function ContactForm() {
           className="mt-4 w-full border-b border-input bg-transparent pb-4 text-base outline-none transition-colors duration-500 focus:border-accent sm:text-sm"
           placeholder="What are you building, and what does success look like?"
         />
-        {errors.description ? <ErrorText>{errors.description}</ErrorText> : null}
+        {errors.description ? (
+          <ErrorText>{errors.description}</ErrorText>
+        ) : null}
       </div>
 
       <button

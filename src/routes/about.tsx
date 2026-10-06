@@ -18,7 +18,8 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About | Clicks N Codes" },
       {
         property: "og:description",
-        content: "One team where creative thinking and technical execution work together.",
+        content:
+          "One team where creative thinking and technical execution work together.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -49,13 +50,15 @@ function AboutPage() {
           <div className="flex flex-col gap-6">
             <Reveal>
               <p className="text-lead">
-                Marketing that gets attention. Technology that does something with it.
+                Marketing that gets attention. Technology that does something
+                with it.
               </p>
             </Reveal>
             <Reveal delay={80}>
               <p className="text-lead text-muted-foreground">
-                We work as one group across strategy, campaigns, design, engineering and automation,
-                so decisions in one discipline are made with the others in the room.
+                We work as one group across strategy, campaigns, design,
+                engineering and automation, so decisions in one discipline are
+                made with the others in the room.
               </p>
             </Reveal>
           </div>
@@ -71,7 +74,9 @@ function AboutPage() {
                 <span className="eyebrow text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="font-display text-title font-bold uppercase">{discipline}</span>
+                <span className="font-display text-title font-bold uppercase">
+                  {discipline}
+                </span>
               </Reveal>
             ))}
           </ul>

@@ -28,7 +28,9 @@ export function WorkSection({
               <Reveal key={project.slug} as="article" className="group">
                 {/* Editorial masthead: index and credits on one hairline, then the name. */}
                 <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3 border-t border-hairline pt-6">
-                  <span className="eyebrow tabular-nums text-accent">{project.number}</span>
+                  <span className="eyebrow tabular-nums text-accent">
+                    {project.number}
+                  </span>
                   <span className="eyebrow text-muted-foreground">
                     {project.client} · {project.industry} · {project.year}
                   </span>
@@ -91,7 +93,8 @@ export function WorkSection({
                       </div>
                       {project.isPlaceholder ? (
                         <p className="mt-6 text-xs uppercase tracking-[0.16em] text-muted-foreground/80">
-                          Sample content — figures are placeholders, not verified results
+                          Sample content — figures are placeholders, not
+                          verified results
                         </p>
                       ) : null}
                     </div>
